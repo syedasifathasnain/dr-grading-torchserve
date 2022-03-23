@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3.5'
+services:
+  torchserve:
+    build: .
+    ports:
+     - "8080:8080"
+     - "9000:8081"
+    command: torchserve --start --model-store model_store --models inception_v3=inception_v3.mar
+    volumes:
+     - ./src:/src
