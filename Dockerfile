@@ -1,4 +1,4 @@
-FROM pytorch/torchserve:0.1-cpu
+FROM pytorch/torchserve:latest
 
 
 # Copy files over
