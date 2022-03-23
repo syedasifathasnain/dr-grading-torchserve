@@ -1,5 +1,5 @@
 
-torch-model-archiver --model-name inception_v3 \
+torch-model-archiver --model-name dr-score \
 --version 1.0 --model-file /home/model-server/model.py \
 --serialized-file best.pth \
 --handler dr_handler.py  \
