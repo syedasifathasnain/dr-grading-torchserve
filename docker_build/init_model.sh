@@ -9,7 +9,7 @@ torch-model-archiver --model-name dr-score \
 ls *.mar
 
 mkdir model_store
-mv inception_v3.mar model_store/
+mv dr-score.mar model_store/
 
 #response=$(curl --write-out %{http_code} --silent --output /dev/null --retry 5 -X POST "http://localhost:8081/models?url=https://torchserve.s3.amazonaws.com/mar_files/resnet-18.mar&initial_workers=1&synchronous=true")
 #

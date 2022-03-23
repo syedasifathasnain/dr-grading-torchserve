@@ -90,7 +90,8 @@ class MyHandler(ImageClassifier):
         # images = torch.cat(images)    
         # return images
         
-        image = requests[0].get("data")  #data-> [1.png,2.png]
+        image = requests[0].get("file")  #data-> [1.png,2.png]
+       
         if image is None:
             image = requests[0].get("body")  
         # image = Image.open(image).convert('RGB')
