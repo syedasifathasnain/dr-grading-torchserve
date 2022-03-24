@@ -6,6 +6,3 @@ services:
     ports:
      - "8080:8080"
      - "9000:8081"
-    command: torchserve --start --model-store model_store --models dr-score=dr-score.mar
-    volumes:
-     - ./src:/src
