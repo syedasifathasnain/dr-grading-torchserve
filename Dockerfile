@@ -21,7 +21,7 @@ USER model-server
 # RUN /home/model-server/download_model.sh
 # RUN bash /home/model-server/init_model.sh
 
-RUN torch-model-archiver --model-name dr-score --version 1.0 --model-file docker_build/scripts/model.py --serialized-file docker_build/model/best.pth --handler docker_build/scripts/dr_handler.py  --requirements-file docker_build/requirements.txt --extra-files docker_build/scripts/handler.py 
+RUN torch-model-archiver --model-name dr-score --version 1.0 --model-file docker_build/scripts/model.py --handler docker_build/scripts/dr_handler.py --serialized-file docker_build/model/model_enet_b4.bin --requirements-file docker_build/requirements.txt --extra-files docker_build/scripts/handler.py,docker_build/efficientnet_pytorch-0.7.1.zip
 RUN mkdir model_store
 RUN mv dr-score.mar model_store
 

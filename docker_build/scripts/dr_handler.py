@@ -1,8 +1,8 @@
 from PIL import Image
 import zipfile
 
-# with zipfile.ZipFile('serve.zip', 'r') as zip_ref:
-#     zip_ref.extractall()
+with zipfile.ZipFile('efficientnet_pytorch-0.7.1.zip', 'r') as zip_ref:
+    zip_ref.extractall()
 from handler import MyHandler
 _service = MyHandler()
 
